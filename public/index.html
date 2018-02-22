@@ -28,7 +28,7 @@
     <div id="root"></div>
     <script>
       if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/offline.js', { scope: '/' })
+        navigator.serviceWorker.register('offline.js', { scope: '/' })
           .then(function(registration) {
                 console.log('Service Worker Registered');
           });
