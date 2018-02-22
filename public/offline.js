@@ -7,9 +7,9 @@ self.addEventListener('install', e => {
     caches.open(CACHE_NAME).then(cache => {
       return cache.addAll([
         `/`,
-        `/index.html`,
-        `/json/data.json`,
-        `/static/js/bundle.js`
+        `index.html`,
+        `json/data.json`,
+        `static/js/bundle.js`
       ])
         .then(() => self.skipWaiting());
     })
