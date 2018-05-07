@@ -16,12 +16,14 @@ class App extends Component {
   onClick = () => {
     this.setState({ books: [], loading: true });
     axios.get('json/data.json').then(data => {
-      setTimeout(()=>{console.log('hi')
+      setTimeout(()=>{console.log('Library data loaded')
       this.setState({
         loading: false,
         books: data.data
-      })}, 1000)
-      
+      })}, 1000)       
+    })
+    .catch(function (error) {
+      console.log('Error loading library data: ' + error)
     });
   }
   render() {
